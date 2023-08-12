@@ -1,3 +1,8 @@
+:root {
+    --main-bg-color: black;
+    --main-transition-time: 5s;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,21 +10,11 @@ body {
     background-size: 80vw;
     background-repeat: no-repeat;
     background-position: top;
-    background-color: black;
+    background-color: var(--main-bg-color);
     font-family: 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-}
-
-h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    font-weight: bold;
 }
 
 .container {
@@ -47,34 +42,57 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 5px;
-    color: #DAE3F2;
+    color: #b8c3d6;
 }
 
 .title {
     text-transform: uppercase;
+    text-shadow: -5px 5px 0 #fff,
+                  5px 5px 0 #fff,
+                  5px -5px 0 #fff,
+                 -5px -5px 0 #fff;
     flex: 0;
-    font-size: 12vw;
-    font-weight: 700;
+    font-size: 10vw;
     text-align: center;
+    opacity: 60%;
+    /*font-weight: 700;*/
     letter-spacing: 10px;
-    color: #edf1f7;
+    color: #1a1f2b;
 }
 
 .motivation {
+    background-color: var(--main-bg-color);
     color: #585a5c;
     text-align: center;
     font-size: 4vw;
     display: flex;
     justify-content: space-evenly;
-    transition: 0.5s;
+    text-transform: uppercase;
+    transition: all var(--main-transition-time);
+}
+
+.text-box {
+    width: 400px;
+    text-align: center;
+    text-wrap: normal;
 }
 
 .text-box:hover {
+    transform: scale(1.2, 1.2);
     color: #919599;
     text-shadow: 0 0 10px #DAE3F2,
                  0 0 20px #DAE3F2;
 }
 
 
+/*h1 {*/
+/*    display: block;*/
+/*    font-size: 2em;*/
+/*    margin-block-start: 0.67em;*/
+/*    margin-block-end: 0.67em;*/
+/*    margin-inline-start: 0;*/
+/*    margin-inline-end: 0;*/
+/*    font-weight: bold;*/
+/*}*/
 
 
