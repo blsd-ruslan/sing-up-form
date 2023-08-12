@@ -4,9 +4,11 @@ body {
     min-height: 100vh;
     background-color: black;
     font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
-.image-container {
+.container {
     margin: 0;
     padding: 0;
     top: 0;
@@ -16,7 +18,7 @@ body {
     overflow: hidden;
 }
 
-.image-container img {
+.container img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,23 +29,10 @@ body {
     max-height: none;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100vh; /* Set the container to full viewport height */
-    align-items: center;
-}
-
-.text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-}
-
 .my-credits {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
     margin: 0;
     flex: 0;
     font-size: 4vw;
@@ -62,7 +51,7 @@ body {
     width: 100%;
     margin: 0;
     flex: 0;
-    font-size: 9vw;
+    font-size: 12vw;
     font-weight: 700;
     text-align: center;
     letter-spacing: 10px;
@@ -77,5 +66,9 @@ h1 {
     margin-inline-start: 0;
     margin-inline-end: 0;
     font-weight: bold;
+}
+
+p {
+    color: orange;
 }
 
