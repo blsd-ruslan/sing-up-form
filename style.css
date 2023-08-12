@@ -2,58 +2,14 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('images/will-h-mcmahan-JHzutZd4hmU-unsplash.jpg');
-    background-size: 100vw;
+    background-size: 80vw;
     background-repeat: no-repeat;
     background-position: top;
     background-color: black;
     font-family: 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
-}
-
-.container {
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-
-}
-
-/*.container img {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%) scale(0.25);*/
-/*    width: auto;*/
-/*    height: auto;*/
-/*    max-width: none;*/
-/*    max-height: none;*/
-/*}*/
-
-.my-credits {
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-    margin: 0;
-    flex: 0;
-    font-size: 4vw;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 5px;
-    color: #D5D8E8;
-}
-
-.title {
-    text-transform: uppercase;
-    flex: 0;
-    font-size: 12vw;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 10px;
-    color: #414769;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -66,7 +22,59 @@ h1 {
     font-weight: bold;
 }
 
-p {
-    color: orange;
+.container {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.my-credits {
+    display: inline-block;
+    width: 100vw;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0;
+    flex: 0;
+    font-size: 4vw;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #DAE3F2;
+}
+
+.title {
+    text-transform: uppercase;
+    flex: 0;
+    font-size: 12vw;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #edf1f7;
+}
+
+.motivation {
+    color: #585a5c;
+    text-align: center;
+    font-size: 4vw;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.5s;
+}
+
+.text-box:hover {
+    color: #919599;
+    text-shadow: 0 0 10px #DAE3F2,
+                 0 0 20px #DAE3F2;
+}
+
+
+
 
