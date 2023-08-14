@@ -5,6 +5,12 @@ errorDiv.classList.add("errorDiv");
 errorDiv.id = "errorDiv";
 let password;
 
+const submitButton = document.getElementById("submit-button");
+
+submitButton.addEventListener("click", function (event) {
+    validate(event);
+});
+
 function validateEmail(input) {
     const re = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
     return re.test(input.value);
@@ -76,6 +82,7 @@ function displayError(option) {
 }
 
 function validate(event){
+    let hasError = false;
     let validateElements = document.getElementsByClassName("validate");
     let inputs = Array.prototype.filter.call(validateElements,
         function(element){
@@ -84,31 +91,22 @@ function validate(event){
 
     // Loop through the inputs to be validated
 
-    for(let i=0; i < inputs.length; i ++ ){
+    for(let i= 0; i < inputs.length; i ++ ){
         let input = inputs[i];
-        if (document.getElementById("errorDiv")) {
-            let tempElement = document.getElementById("errorDiv");
-            tempElement.remove();
-        }
         let currentId = input.getAttribute("id");
         if(input.value.length === 0 && (currentId === "fname" || currentId === "lname")){
             displayError(currentId);
             // error class
             input.classList.add("err");
-            event.preventDefault();
+            hasError = true;
             break;
         }
         if (currentId === "mail") {
             if (!validateEmail(input)) {
                 displayError(currentId);
                 input.classList.add("err");
-                event.preventDefault();
+                hasError = true;
                 break;
-            }
-            else {
-                if (errorDiv.classList.contains("mail")) {
-                    errorDiv.innerHTML('');
-                }
             }
 
         }
@@ -116,45 +114,35 @@ function validate(event){
                 if (!validatePhoneNumber(input)) {
                     displayError(currentId);
                     input.classList.add("err");
-                    event.preventDefault();
+                    hasError = true;
                     break;
-                }
-                else {
-                    if (errorDiv.classList.contains("phone")) {
-                        errorDiv.innerHTML('');
-                    }
                 }
 
         }
         if (currentId === "password") {
+            password = input.value;
             if (!validatePassword(input)) {
                 displayError(currentId);
                 input.classList.add("err");
-                event.preventDefault();
+                hasError = true;
                 break;
-            }
-            else {
-                password = input.value;
-                if (errorDiv.classList.contains("password")) {
-                    errorDiv.innerHTML('');
-                }
             }
         }
         if (currentId === "confirm-password") {
             if (!input.value === password)  {
                 displayError(currentId);
                 input.classList.add("err");
-                event.preventDefault();
+                hasError = true;
                 break;
             }
-            else {
-                if (errorDiv.classList.contains("confirm-password")) {
-                    errorDiv.innerHTML('');
-                }
-            }
         }
-        containerForm.removeChild(errorDiv);
+        // if (containerForm.contains(errorDiv)) {
+        //     containerForm.removeChild(errorDiv);
+        // }
         /// add option for comparing passwords
         input.classList.remove("err");
+    }
+    if (hasError) {
+        event.preventDefault();
     }
 }
