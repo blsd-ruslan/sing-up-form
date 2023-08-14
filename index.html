@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
 
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,500;0,600;0,700;0,900;1,500;1,800&family=Roboto&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
     </style>
@@ -29,37 +32,46 @@
         <h3>Achieve fast</h3>
     </div>
 </div>
-<div>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
-    <p>slkdagjldsa</p>
+
+<div id="form-container">
+    <form id="sign-up-form" novalidate>
+        <fieldset class="main-fieldset">
+            <legend>SIGN UP</legend>
+            <div class="row">
+                <div class="label-field">
+                    <label for="fname">FIRST NAME</label>
+                    <input type="text" id="fname" name="fname" class="validate">
+                </div>
+                <div class="label-field">
+                    <label for="lname">LAST NAME</label>
+                    <input type="text" id="lname" name="lname" class="validate"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label-field">
+                    <label for="mail">EMAIL</label>
+                    <input type="email" id="mail" name="mail" class="validate">
+                </div>
+                <div class="label-field">
+                    <label for="phone-number">PHONE NUMBER</label>
+                    <input type="tel" id="phone-number" name="phone-number" class="validate"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label-field">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" class="validate">
+                </div>
+                <div class="label-field">
+                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm-password" name="confirm-password" class="validate">
+                </div>
+            </div>
+            <button id="submit-button">SUBMIT</button>
+        </fieldset>
+
+    </form>
+
 </div>
 <script src="signUp.js"></script>
 </body>
