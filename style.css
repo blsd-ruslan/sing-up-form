@@ -14,6 +14,7 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
+    align-items: center;
     overflow-x: hidden;
 }
 
@@ -47,17 +48,13 @@ body {
 
 .title {
     text-transform: uppercase;
-    text-shadow: -5px 5px 0 #fff,
-                  5px 5px 0 #fff,
-                  5px -5px 0 #fff,
-                 -5px -5px 0 #fff;
     flex: 0;
     font-size: 10vw;
     text-align: center;
-    opacity: 60%;
+    opacity: 90%;
     /*font-weight: 700;*/
     letter-spacing: 10px;
-    color: #1a1f2b;
+    color: #fff;
 }
 
 .motivation {
@@ -66,6 +63,7 @@ body {
     text-align: center;
     font-size: 4vw;
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
     text-transform: uppercase;
     transition: all var(--main-transition-time);
@@ -84,6 +82,84 @@ body {
                  0 0 20px #DAE3F2;
 }
 
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sign-up-form {
+    background-color: var(--main-bg-color);
+    color: white;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2vw;
+    margin: 2vw 5vw 5vw 5vw;
+}
+
+.main-fieldset {
+    padding: 5vw 1vw;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    border: 1px solid #ccc;
+}
+
+legend {
+    position: absolute;
+    top: 20px;
+}
+
+input {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 1vw;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none;
+    border: 3px solid #9fb2d4;
+}
+
+.main-fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.row {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 1vw;
+}
+
+.label-field {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    gap: 8px;
+}
+
+.err {
+    border: 3px solid #f74343;
+}
+
+.errorDiv {
+    width: 75%;
+    color: white;
+    font-size: 1vw;
+    background-color: #fa7373;
+    border: 3px solid #f74343;
+    border-radius: 10px;
+    text-align: center;
+}
 
 /*h1 {*/
 /*    display: block;*/
